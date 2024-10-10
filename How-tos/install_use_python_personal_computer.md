@@ -14,6 +14,7 @@ main editor and interface to program in Python.
     - [Installing](#installing-mamba)
 5. [Step 3: Creating a Virtual Environment and Installing Modules](#step-3-creating-a-virtual-environment-and-installing-modules)
 6. [Ipython](#ipython)
+7. [Jupyter Notebook](#jupyter-notebook)
 
 <br>
 
@@ -152,6 +153,8 @@ You will see the activated environment's name replacing "(base)".
 
 <br>
 
+---
+
 ## Ipython
 
 To do some tests:
@@ -172,3 +175,17 @@ If you have a Python script you can run it in Ipython, like:
 ```
 run python_script.py
 ```
+
+<br>
+
+---
+
+## Jupyter Notebook
+To be able to run a jupyter notebook script on VScode you need first to do the following command:
+
+```
+python -m ipykernel install --user --name name_your_env --display-name "name_your_env"
+
+```
+
+Where you need to replace name_your_env to the name you created your virtual environment. If your VScode is open, it is better to close and open it again to make sure it will recognise the kernel.
