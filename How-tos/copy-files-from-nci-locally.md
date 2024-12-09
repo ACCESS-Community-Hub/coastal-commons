@@ -1,4 +1,4 @@
-# How to Install and Use Python on NCI
+# How to download files from NCI locally.
 
 This guide will help you download files from NCI-Gadi on you local computer.
 
