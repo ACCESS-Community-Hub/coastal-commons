@@ -26,7 +26,8 @@ RUNNING INSIDE PYTHON: You need to change the variables at the bottom of this sc
 
 Fernando Sobral - 8th Nov 2024
 
-mod. FS on 20th Feb 2025: adpted to an copernicusmarine update, added ways to choose more than one product and to give the arguments from the terminal
+mod. FS on 20th Feb 2025: adapted to the copernicusmarine API update.
+                          Added ways to choose more than one product and to give the arguments from the terminal
 
 '''
 
