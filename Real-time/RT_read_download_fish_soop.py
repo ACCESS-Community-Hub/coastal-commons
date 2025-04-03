@@ -77,8 +77,8 @@ list_dataset = list_catalog(catalog_url, list_dataset)
 # 
 # DOWNLOADING:
 # Change FOLDER_PATH according. This is just an example to download 10 files. Remove [:10] if you want to donwload all the files.
-folder_path = '../temp_data'
-download_fishsoop(folder_path, list_dataset[:10])
+folder_path = '../temp_data/'
+download_fishsoop(folder_path, list_dataset)
 
 # 
 # 
