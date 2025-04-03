@@ -45,7 +45,7 @@ def download_fishsoop(folder_path, list_dataset):
     for ff in list_dataset:
         response = requests.get(ff['HTTPServer'])
         if response.status_code == 200:
-            with open(os.path.join(f"{folder_path}, {ff['HTTPServer'].split('/')[-1]}"), "wb") as f:
+            with open(os.path.join(f"{folder_path}", f"{ff['HTTPServer'].split('/')[-1]}"), "wb") as f:
                 f.write(response.content)
             print("File %s downloaded successfully." % ff['HTTPServer'].split('/')[-1])
         else:
