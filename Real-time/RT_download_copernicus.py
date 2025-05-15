@@ -48,36 +48,45 @@ import sys
 def get_catalog(product):
     if product == 'SST':
         product_id = 'SST_GLO_SST_L4_REP_OBSERVATIONS_010_011'
+        discrete = False
     elif product == 'SSH':
         product_id = 'SEALEVEL_GLO_PHY_L4_MY_008_047'
+        discrete = False
     elif product == 'CORA':
-        product_id = 'INSITU_GLO_PHY_TS_OA_MY_013_052'
+        product_id = 'INSITU_GLO_PHY_TS_DISCRETE_MY_013_001'
+        discrete = True
 
     catalog = copernicusmarine.describe(product_id=product_id)
-    return catalog
+    return catalog, discrete
 
 
 def download(username, password, st_date, nd_date, output_path, product, min_lat=-45, max_lat=-15, min_lon=142, max_lon=170):
     
-    catalog = get_catalog(product)
+    catalog, discrete = get_catalog(product)
 
-    copernicusmarine.subset(
-        dataset_id=catalog.products[0].datasets[0].dataset_id,
-        # variables=['analysed_sst'],
-        minimum_longitude=min_lon,
-        maximum_longitude=max_lon,
-        minimum_latitude=min_lat,
-        maximum_latitude=max_lat,
-        minimum_depth=0,
-        maximum_depth=8000,
-        username=username,
-        password=password,
-        start_datetime=st_date,
-        end_datetime=nd_date,
-        output_directory=output_path
-    
-    )
-
+    if not discrete:
+        copernicusmarine.subset(
+            dataset_id=catalog.products[0].datasets[0].dataset_id,
+            minimum_longitude=min_lon,
+            maximum_longitude=max_lon,
+            minimum_latitude=min_lat,
+            maximum_latitude=max_lat,
+            minimum_depth=0,
+            maximum_depth=8000,
+            username=username,
+            password=password,
+            start_datetime=st_date,
+            end_datetime=nd_date,
+            output_directory=output_path
+        
+        )
+    else:
+        copernicusmarine.get(
+            dataset_id=catalog.products[0].datasets[0].dataset_id,
+            username=username,
+            password=password,
+            output_directory=output_path
+        )
 
 # ===================================================
 # Running
@@ -88,12 +97,12 @@ if __name__ == "__main__":
         print('Remember that if your password has special characters you should use \ before the character to scaped and to be recognised as a string.')
         download(sys.argv[1], sys.argv[2], sys.argv[3], sys.argv[4], sys.argv[5], sys.argv[6])
     else:
-        username = 'username'
-        password = r'password'
-        st_date = "start_date"
-        nd_date = "end_date"
-        output_path = 'output_path'
-        product='SST'
+        username = 'fnogueiraca'
+        password = r'S125*\U298.+32xC'
+        st_date = "2019-01-01"
+        nd_date = "2019-02-01"
+        output_path = './'
+        product='CORA'
         download(username, password, st_date, nd_date, output_path, product)
 
 
