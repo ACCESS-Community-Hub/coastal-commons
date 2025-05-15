@@ -4,7 +4,12 @@ in Real Time analysis.
 
 ** You need to have a Copernicus EU account in order to download data. **
 
-At the moment, this script is set to download SST dataset (for a specific OSTIA product) and SSH.
+At the moment, this script is set to download:
+    - SST dataset (for a specific OSTIA product), 
+    - SSH 
+    - CORA (Temperature and Salinity over depth)
+
+The product names are: SST, SSH, CORA
 
 Example inputs:
 username = as string
@@ -28,7 +33,7 @@ Fernando Sobral - 8th Nov 2024
 
 mod. FS on 20th Feb 2025: adapted to the copernicusmarine API update.
                           Added ways to choose more than one product and to give the arguments from the terminal
-
+mod. FS on 15th May 2025: added CORA dataset and changed maximum depth for subsurface data.
 '''
 
 #========================================================
@@ -45,6 +50,8 @@ def get_catalog(product):
         product_id = 'SST_GLO_SST_L4_REP_OBSERVATIONS_010_011'
     elif product == 'SSH':
         product_id = 'SEALEVEL_GLO_PHY_L4_MY_008_047'
+    elif product == 'CORA':
+        product_id = 'INSITU_GLO_PHY_TS_OA_MY_013_052'
 
     catalog = copernicusmarine.describe(product_id=product_id)
     return catalog
@@ -62,7 +69,7 @@ def download(username, password, st_date, nd_date, output_path, product, min_lat
         minimum_latitude=min_lat,
         maximum_latitude=max_lat,
         minimum_depth=0,
-        maximum_depth=0,
+        maximum_depth=8000,
         username=username,
         password=password,
         start_datetime=st_date,
