@@ -88,11 +88,19 @@ if __name__ == "__main__":
         print('Remember that if your password has special characters you should use \ before the character to scaped and to be recognised as a string.')
         download(sys.argv[1], sys.argv[2], sys.argv[3], sys.argv[4], sys.argv[5], sys.argv[6])
     else:
+<<<<<<< HEAD
         username = 'username'
         password = r'password'
         st_date = "start_date"
         nd_date = "end_date"
         output_path = 'output_path'
+=======
+        username = 'yourusername'
+        password = r'yourpassword'
+        st_date = "initaldate"
+        nd_date = "enddate"
+        output_path = 'outputpath'
+>>>>>>> c2b3607 (changed credentials)
         product='SST'
         download(username, password, st_date, nd_date, output_path, product)
 
