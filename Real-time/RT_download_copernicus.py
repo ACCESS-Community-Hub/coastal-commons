@@ -97,12 +97,12 @@ if __name__ == "__main__":
         print('Remember that if your password has special characters you should use \ before the character to scaped and to be recognised as a string.')
         download(sys.argv[1], sys.argv[2], sys.argv[3], sys.argv[4], sys.argv[5], sys.argv[6])
     else:
-        username = 'fnogueiraca'
-        password = r'S125*\U298.+32xC'
-        st_date = "2019-01-01"
-        nd_date = "2019-02-01"
-        output_path = './'
-        product='CORA'
+        username = 'username'
+        password = r'password'
+        st_date = "start_date"
+        nd_date = "end_date"
+        output_path = 'output_path'
+        product='SST'
         download(username, password, st_date, nd_date, output_path, product)
 
 
