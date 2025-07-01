@@ -1,4 +1,4 @@
-# ACCESS-NRI-SEACOFS
+# Coastal Commons
 
 ## Setting Up a Python Virtual Environment
 
