@@ -1,5 +1,17 @@
 # Coastal Commons
 
+## TODO (by 01 August)
+- [x] License - HM
+- [x] Load first notebooks - HM
+- [ ] Share workflow for uploading exisiting notebook / preserve history - HM
+- [ ] Create python environment (conda or venv) - PC
+- [ ] Create module file for loading py env above - PC
+- [ ] Upload scripts for downloading sattelite data (OSTIA, AVISO) - PC
+- [ ] Rendered pictures / prints on notebooks or not - HM, PC, FS
+- [ ] Add `contributors` file
+- [ ] document relevant info / changes in this README file
+- [ ] FS to nominate other scripts that can be uploaded
+
 ## Setting Up a Python Virtual Environment
 
 #### 1) Clone the Repository
