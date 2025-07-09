@@ -6,6 +6,7 @@
 - [ ] Share workflow for uploading exisiting notebook / preserve history - HM
 - [ ] Create python environment (conda or venv) - PC
 - [ ] Create module file for loading py env above - PC
+- [ ] Create directory to store sample files required by the model recipes - PC
 - [ ] Upload scripts for downloading sattelite data (OSTIA, AVISO) - PC
 - [ ] Rendered pictures / prints on notebooks or not - HM, PC, FS
 - [ ] Add `contributors` file
