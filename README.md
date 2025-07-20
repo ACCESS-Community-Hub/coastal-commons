@@ -8,10 +8,10 @@
 - [ ] Create module file for loading py env above - PC
 - [ ] Create directory to store sample files required by the model recipes - PC
 - [ ] Upload scripts for downloading sattelite data (OSTIA, AVISO) - PC
-- [ ] Rendered pictures / prints on notebooks or not - HM, PC, FS
-- [ ] Add `contributors` file
-- [ ] document relevant info / changes in this README file
-- [ ] FS to nominate other scripts that can be uploaded
+- [ ] Rendered pictures / prints on notebooks or not? - HM, PC, FS
+- [ ] Add `contributors` file - HM
+- [ ] Nominate other scripts that can be uploaded - HM, FS
+- [ ] Document relevant info / changes in this README file
 
 ## Setting Up a Python Virtual Environment
 
