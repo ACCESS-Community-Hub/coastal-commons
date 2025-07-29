@@ -3,7 +3,7 @@
 ## TODO (by 01 August)
 - [x] License - HM
 - [x] Load first notebooks - HM
-- [ ] Share workflow for uploading exisiting notebook / preserve history - HM
+- [x] Share workflow for uploading exisiting notebook / preserve history - HM
 - [ ] Create python environment (conda or venv) - PC
 - [ ] Create module file for loading py env above - PC
 - [ ] Create directory to store sample files required by the model recipes - PC
@@ -38,3 +38,39 @@ source "<path-to-venv-dir>/seacofs/bin/activate"
 pip install --upgrade pip
 pip install -r "<path-to-cloned-repository>/requirements.txt" --no-cache-dir
 ```
+## Uploading a file
+
+You will need access to xp65 on gadi and write permissions to this repository. If you don't have write permissions then please [raise an issue](https://github.com/ACCESS-Community-Hub/coastal-commons/issues/new). Include a description of the file you want to upload 
+### Getting the scripts
+The first time you upload your file you will need to download a git filter repo script:
+```
+mkdir -p ~/code
+cd ~/code
+git clone https://github.com/newren/git-filter-repo.git
+```
+
+### Upload your file 
+These next steps will need to be repeated for each file
+#### Download the repository from which your file is coming from. 
+For this example we are using ACCESS-NRI-SEACOFS but you can swap the url and repository name to any GitHub repository.
+```
+cd ~/code
+git clone https://github.com/UNSW-oceanography/ACCESS-NRI-SEACOFS.git
+cd ACCESS-NRI-SEACOFS/
+```
+#### Run script to isolate only your file. 
+Note that for this example, the file here is called “README.md”. You will need to change this to the relative path (references from the top directory) and name of the file you want to upload
+
+```
+module use /g/data/xp65/public/modules; 
+module load conda/analysis3
+python3 ../git-filter-repo/git-filter-repo --path README.md --path-rename README.md:README.md
+```
+#### Import the preexisting coastal commons file and push back to GitHub
+```
+git remote add repo-b https://github.com/ACCESS-Community-Hub/coastal-commons.git
+git pull --rebase https://github.com/ACCESS-Community-Hub/coastal-commons.git
+git checkout -b import-new-file
+git push repo-b import-new-file
+```
+You will need to navigate to the import-new-file branch on githib and create a pull request into main – describing the new files and its usage
