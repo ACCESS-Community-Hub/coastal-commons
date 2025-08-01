@@ -1,30 +1,23 @@
 # Coastal Commons
 
-## TODO (by 01 August)
-- [x] License - HM
-- [x] Load first notebooks - HM
-- [x] Share workflow for uploading exisiting notebook / preserve history - HM
-- [x] Create python environment (conda or venv) - PC
-- [ ] Create module file for loading py env above - PC
-- [ ] Create directory to store sample files required by the model recipes - PC
-- [ ] Upload scripts for downloading sattelite data (OSTIA, AVISO) - PC
-- [ ] Add `contributors` file - HM
-- [ ] Nominate other scripts that can be uploaded - HM, FS
-- [ ] Document relevant info / changes in this README file
+## Basic requirements:
 
-## Uploading a file
+- Be a member of `yj27` project on NCI Gadi for data access. If you aren't a member yet then please [request membership](https://my.nci.org.au/mancini/project/yj27); 
 
-You will need access to xp65 on gadi and write permissions to this repository. If you don't have write permissions then please [raise an issue](https://github.com/ACCESS-Community-Hub/coastal-commons/issues/new). Include a description of the file you want to upload
-### Getting the scripts
-The first time you upload your file you will need to download a git filter repo script:
-```
-mkdir -p ~/code
-cd ~/code
-git clone https://github.com/newren/git-filter-repo.git
-```
+- Write permissions to this repository. If you don't have write permissions then please [raise an issue](https://github.com/ACCESS-Community-Hub/coastal-commons/issues/new). Include a description of the file you want to upload.
 
-### Upload your file 
-These next steps will need to be repeated for each file
+## Start the virtual environment
+This will load required system libraries and automatically activate the `coastal-commons-recipes` python environment.
+
+````
+module use load /g/data/yj27/public/modules 
+module load pyvenv/coastal-commons-recipes
+````
+
+## Uploading an existing file from another repository
+
+These next steps will need to be repeated for each file in order to preserve the associated git history.  
+
 #### Download the repository from which your file is coming from. 
 For this example we are using ACCESS-NRI-SEACOFS but you can swap the url and repository name to any GitHub repository.
 ```
@@ -36,9 +29,7 @@ cd ACCESS-NRI-SEACOFS/
 Note that for this example, the file here is called “README.md”. You will need to change this to the relative path (references from the top directory) and name of the file you want to upload
 
 ```
-module use /g/data/xp65/public/modules; 
-module load conda/analysis3
-python3 ../git-filter-repo/git-filter-repo --path README.md --path-rename README.md:README.md
+git-filter-repo --path README.md --path-rename README.md:README.md
 ```
 #### Import the preexisting coastal commons file and push back to GitHub
 ```
