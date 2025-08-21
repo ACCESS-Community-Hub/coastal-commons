@@ -19,10 +19,11 @@ module load pyvenv/coastal-commons-recipes
 These next steps will need to be repeated for each file in order to preserve the associated git history.  
 
 #### Download the repository from which your file is coming from. 
-For this example we are using ACCESS-NRI-SEACOFS but you can swap the url and repository name to any GitHub repository.
+For this example we are using ACCESS-NRI-SEACOFS but you can swap the url and repository name to any GitHub repository. Make sure you clone it as "bare", so you have only the metadata which contains the history. You won't have the tree structure as a normal repo.
+
 ```
 cd ~/code
-git clone https://github.com/UNSW-oceanography/ACCESS-NRI-SEACOFS.git
+git clone --bare https://github.com/UNSW-oceanography/ACCESS-NRI-SEACOFS.git
 cd ACCESS-NRI-SEACOFS/
 ```
 #### Run script to isolate only your file. 
