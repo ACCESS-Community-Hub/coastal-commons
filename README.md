@@ -10,7 +10,7 @@
 This will load required system libraries and automatically activate the `coastal-commons-recipes` python environment.
 
 ````
-module use load /g/data/yj27/public/modules 
+module use /g/data/yj27/public/modules 
 module load pyvenv/coastal-commons-recipes
 ````
 
@@ -29,7 +29,7 @@ cd ACCESS-NRI-SEACOFS/
 Note that for this example, the file here is called “README.md”. You will need to change this to the relative path (references from the top directory) and name of the file you want to upload
 
 ```
-git-filter-repo --path README.md --path-rename README.md:README.md
+git filter-repo --path README.md --path-rename README.md:README.md
 ```
 #### Import the preexisting coastal commons file and push back to GitHub
 ```
