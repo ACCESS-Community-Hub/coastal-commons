@@ -1,4 +1,6 @@
 #!/bin/bash
+# Author: Fernando Sobral
+# Date: 22 Aug 2025
 
 # Usage: ./export_recipe.sh Recipes/model_MKE_EKE.ipynb "MKE EKE"
 # First argument: file path in source repo
