@@ -1,5 +1,5 @@
 
 Welcome to the coastal commons documentation!
 
-Press the pencil to edit me!!
+Press the pencil (twice) to edit me!!
 
