@@ -2,7 +2,7 @@
 
 ## Basic requirements:
 
-- Be a member of `yj27` project on NCI Gadi for data access. If you aren't a member yet then please [request membership](https://my.nci.org.au/mancini/project/yj27); 
+- Be a member of `yj27` project on NCI Gadi for data access. If you aren't a member yet then please [request membership](https://my.nci.org.au/mancini/project/yj27);  
 
 - Write permissions to this repository. If you don't have write permissions then please [raise an issue](https://github.com/ACCESS-Community-Hub/coastal-commons/issues/new). Include a description of the file you want to upload.
 
