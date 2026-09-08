@@ -95,11 +95,7 @@ markdown_extensions:
 
 # Navigation
 nav:
-  - Home:                  pages/index.md
-  - How To:
-        - copy:               pages/howto/copy-files-from-nci-locally.md         
-        - install copernicus: pages/howto/install_copernicus_marine_API.md       
-        - use python:         pages/howto/install_use_python_personal_computer.md
+  - Home: pages/index.md
 
 # Footer
 extra:
