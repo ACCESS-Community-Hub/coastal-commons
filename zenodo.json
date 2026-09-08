@@ -1,0 +1,25 @@
+{
+   "title":"Coastal Commons Cookbook: A cookbook of recipes for analysing regional and ocean model output",
+   "license":"Apache-2.0",
+   "creators":[
+      {
+         "affiliation":"Australian National University, Australia's Climate Simulator (ACCESS-NRI)",
+         "name":"Macdonald, Helen",
+         "orcid":"0000-0003-4734-3150",
+         "type":"ProjectLeader"
+      },
+      {
+         "affiliation":"UNSW Sydney",
+         "name":"Couto, Phellipe",
+         "orcid":"0009-0008-3457-1756",
+         "type":"ProjectMember"
+      }
+   ],
+   "keywords": [
+     "Ocean Modeling",
+     "Data Analysis",
+     "Diagnostics",
+     "Python"
+   ],
+   "upload_type":"software"
+}

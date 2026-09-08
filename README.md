@@ -55,12 +55,13 @@ Have you made a _recipe_ for analysing something that is not already included in
 You are more than welcome to share it and include it in the cookbook!
 
 Consider  **contributing your recipe back to the repository**.
-
 We are always delighted to expand our cookbook with more recipes.
 
 If the process of contributing to the repository sounds a bit intimidating to you, rest assured that we will guide you and help you with submitting your contribution.
 
 To make a contribution just raise [an issue](https://github.com/ACCESS-Community-Hub/coastal-commons-cookbook/issues) explaining briefly what the contribution you want to make is and we'll help you out with the process! 
+
+Contributors to the Coastal Commons Cookbook are added to the citable DOI entry associated with this repository. Hence, users who put together a pull request for a new contribution, should ensure that the pull request also modifies the [zenodo.json](https://github.com/ACCESS-Community-Hub/coastal-commons-cookbook/zenodo.json) file to include their affiliation details.
 
 <br>
 
