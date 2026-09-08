@@ -96,6 +96,9 @@ markdown_extensions:
 # Navigation
 nav:
   - Home: pages/index.md
+  - test-page: 
+    - test-subpage: pages/test/index.md
+
 
 # Footer
 extra:
