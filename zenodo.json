@@ -13,6 +13,24 @@
          "name":"Couto, Phellipe",
          "orcid":"0009-0008-3457-1756",
          "type":"ProjectMember"
+      },
+      {
+         "affiliation":"UNSW Sydney",
+         "name":"Sobral, Fernando",
+         "orcid":"0000-0001-8042-1814",
+         "type":"ProjectMember"
+      }
+      {
+         "affiliation":"UNSW Sydney",
+         "name":"Malan, Neil",
+         "orcid":"0000-0001-7568-3908",
+         "type":"ProjectMember"
+      }
+      {
+         "affiliation":"University of Queensland",
+         "name":"Gwyther, David",
+         "orcid":"0000-0002-7218-2785",
+         "type":"ProjectMember"
       }
    ],
    "keywords": [
