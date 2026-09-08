@@ -1,68 +1,98 @@
-# Coastal Commons
+# Coastal Commons Cookbook
 
-## Basic requirements:
+A Cookbook 📔 of _Recipes_ for analysing regional and coastal ocean model outputs. 👩🏽‍🍳 👨🏻‍🍳
 
-- Be a member of `yj27` project on NCI Gadi for data access. If you aren't a member yet then please [request membership](https://my.nci.org.au/mancini/project/yj27);  
+A _recipe_ is an example of an analysis of some ocean model output or ocean-related observational datasets.
 
-- Write permissions to this repository. If you don't have write permissions then please [raise an issue](https://github.com/ACCESS-Community-Hub/coastal-commons/issues/new). Include a description of the file you want to upload.
+Each _recipe_ comes in a self-contained and well-documented Jupyter Notebook.
 
-## Start the virtual environment
-This will load required system libraries and automatically activate the `coastal-commons-recipes` python environment.
+All recipes combined form a cookbook 📔!
 
-````
-module use /g/data/yj27/public/modules 
-module load pyvenv/coastal-commons-recipes
-````
+---
 
-## Uploading an existing file from another repository
+### Recipe Access
+<br>
+Clone this GitHub repository in your local space on one of the NCI HPC machines so you can have access to model output. 
 
-To facilitate the process which involve many steps, we have created a bash script to automate most of it. To start off, you need to be in the same folder where coastal-commons repo is. It is recommended to avoid any problem, that you create a new folder which will contain coastal-commons and source bare repository and the bash script "automate_github_recipes.sh". After cloning "coastal-commons" repo, copy the bash script to recentlty created folder as below:
+You should then be able to run these recipes (i.e., example analyses) through an [Australian Research Environment (ARE)](https://docs.access-hive.org.au/getting_started/are/) JupyterLab session or via any other way you might want to run a Jupyter notebook on an NCI HPC machine. 
 
-```
-mkdir temporary
-cd temporary
-git clone https://github.com/ACCESS-Community-Hub/coastal-commons.git
-cp coastal-commons/automate_github_recipes.sh ../
-```
+If you plan to use an [ARE session](https://docs.access-hive.org.au/getting_started/are/), then remember to define the following settings to the resource allocation form:
 
-To use the automate script you need to also inform the path to the file you want to copy (skipping the name of the source repo since it assumes by default it is "ACCESS-NRI-SEACOFS.git") and the commit comment as string:
+- In **_Storage_**: set to `gdata/yj27`, plus any other projects you may need access to; 
+- In **_Module directories_**: set to `/g/data/yj27/public/modules`; 
+- In **_Modules_** field: set to `pyvenv/coastal-commons-recipes`;
+- In **_Compute Size_** field: set to `Large` or greater.
+<br>
 
-```
-bash automate_github_recipes.sh Recipes/OHC_calculation.ipynb "Copying OHC recipe"
-```
-
-After that you just need to monitor the terminal and press ENTER when it is requested and you don't run into any error.
-
-When the copy is pushed to the remote repo, you will need to visit coastal-commons on Github. Click on the link printed on the terminal with a message like:
-
-```
-remote: Create a pull request for 'import-recipe' on GitHub by visiting:
-remote:      https://github.com/ACCESS-Community-Hub/coastal-commons/pull/new/import-recipe
-```
-
-Do the pull request and if you have permissions merge into main. After you have done that, go back to your terminal and press ENTER. This will remove the branch created, clean, and pull your coastal-commons with the new changes to keep it updated.
+<div align="center">
+<blockquote>
+Please check out this <a href=[](https://access-hive.org.au/getting_started/are/)>Getting Started with ARE</a> documentation if you are not already familiar with the ARE.
+</blockquote>
+</div>
 
 
+<p>&nbsp;</p>
 
-<!-- #### Download the repository from which your file is coming from.  -->
-<!-- For this example we are using ACCESS-NRI-SEACOFS but you can swap the url and repository name to any GitHub repository. Make sure you clone it as "bare", so you have only the metadata which contains the history. You won't have the tree structure as a normal repo.
+### Data Access
+<br>
+To be able to execute the _recipes_, you will need to have access to the data files used within these _recipes_ you will need an account with the Australian-based [National Computational Infrastructure (NCI)](https://nci.org.au/).
 
-```
-cd ~/code
-git clone --bare https://github.com/UNSW-oceanography/ACCESS-NRI-SEACOFS.git
-cd ACCESS-NRI-SEACOFS/
-```
-#### Run script to isolate only your file. 
-Note that for this example, the file here is called “README.md”. You will need to change this to the relative path (references from the top directory) and name of the file you want to upload
+You will need to [join the NCI project](https://docs.access-hive.org.au/getting_started/set_up_nci_account/#join-relevant-nci-projects) `yj27` to run the recipes and access the data analysed, or as indicated in the _recipe's_ header paragraph. If you **<u>are not a member</u>** of the `yj27` project yet then please [request membership](https://my.nci.org.au/mancini/project/yj27); 
 
-```
-git filter-repo --path README.md --path-rename README.md:README.md
-```
-#### Import the preexisting coastal commons file and push back to GitHub
-```
-git remote add repo-b https://github.com/ACCESS-Community-Hub/coastal-commons.git
-git pull --rebase https://github.com/ACCESS-Community-Hub/coastal-commons.git
-git checkout -b import-new-file
-git push repo-b import-new-file
-```
-You will need to navigate to the import-new-file branch on githib and create a pull request into main – describing the new files and its usage -->
+<br>
+
+<div align="center">
+<blockquote>
+Please check out <a href=[URL](https://access-hive.org.au/getting_started/set_up_nci_account>Getting Started with NCI</a> documentation if you are not already familiar with the NCI.
+</blockquote>
+</div>
+
+---
+### Contributing
+<br>
+Have you made a _recipe_ for analysing something that is not already included in this cookbook?
+
+You are more than welcome to share it and include it in the cookbook!
+
+Consider  **contributing your recipe back to the repository**.
+
+We are always delighted to expand our cookbook with more recipes.
+
+If the process of contributing to the repository sounds a bit intimidating to you, rest assured that we will guide you and help you with submitting your contribution.
+
+To make a contribution just raise [an issue](https://github.com/ACCESS-Community-Hub/coastal-commons-cookbook/issues) explaining briefly what the contribution you want to make is and we'll help you out with the process! 
+
+<br>
+
+<div align="center">
+<blockquote>
+Please check out the <strong><em>Contributing</em></strong> section <a href=https://cosima-recipes.readthedocs.io/en/latest/contributing.html>Contributing to the Cookbook</a> for a useful reference on how to get started with the process of uploading your own notebooks or editing existing one.
+</blockquote>
+</div>
+
+
+---
+### Credits
+The structure and content of this repository draws inspiration from the following Community of Practices (CoPs): 
+
+
+* [Consortium for Ocean-Sea Ice Modelling in Australia (COSIMA)](http://cosima.org.au/)'s [Cookbook repository](https://github.com/COSIMA/cosima-recipes) that holds recipes for analysing ocean-sea ice model outputs.
+
+<br>
+
+* ACCESS-NRI Atmospheric working group's [Cookbook repository](https://github.com/ACCESS-Community-Hub/atmosphere-cookbook) that holds recipes for analysing atmospheric model outputs.
+
+<br>
+
+<div align="center">
+<blockquote>
+These initiatives are supported by <a href=https://www.access-nri.org.au>ACCESS-NRI</a>  and the <a href=https://www.coastri.org.au>Coastal Research Infrastructure (CoastRI)</a> 
+</blockquote>
+</div>
+
+---
+### Citation
+<br>
+If you use a recipe from the Cookbook for your research or teaching, or have based your analysis on one of the recipes, we would be grateful if you could cite:
+
+[![PLACEHOLDER FOR DOI]()]()
